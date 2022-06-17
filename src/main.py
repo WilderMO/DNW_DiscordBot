@@ -15,9 +15,7 @@ class MyClient(discord.Client):
             if message.author == self.user:
                 return
 
-            command = message.content[1:-0]
-
-            if command == 'ping':
+            if message.content == Config.prefix + 'ping':
                 await message.channel.send('pong')
 
 
