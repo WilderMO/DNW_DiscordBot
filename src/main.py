@@ -21,6 +21,10 @@ class MyClient(discord.Client):
             if message.content == Config.prefix + 'help':
                 await message.channel.send('**DNW Bot Help** \n change prefix = `prefix <option>` \n show help = `help` \n ')
 
+            if message.content == Config.prefix + 'prefix' + newPrefix:
+                Config.prefix == newPrefix
+                await message.channel.send('New DNW Bot prefis `' + Config.prefix + '`')
+
         else:
             return
         
